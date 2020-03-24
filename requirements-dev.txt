@@ -1,0 +1,7 @@
+black
+isort
+pytest-django
+pytest-cov
+flake8
+flake8-print
+responses
