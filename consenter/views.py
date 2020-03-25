@@ -13,7 +13,7 @@ class ConsentView(FormView):
         Populates the hidden uuid field in the form from the url.
         """
         initial = super().get_initial()
-        initial['uuid'] = self.kwargs['user_uuid']
+        initial["uuid"] = self.kwargs["user_uuid"]
         return initial
 
     def form_valid(self, form):
@@ -22,5 +22,3 @@ class ConsentView(FormView):
         """
         form.save_consent()
         return super().form_valid(form)
-
-

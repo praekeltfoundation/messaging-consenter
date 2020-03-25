@@ -7,8 +7,7 @@ urlpatterns = [
     path(
         "success/",
         TemplateView.as_view(template_name="consenter/success.html"),
-        name="success"
+        name="success",
     ),
     path("<str:user_uuid>/", views.ConsentView.as_view(), name="consent"),
-    
 ]
