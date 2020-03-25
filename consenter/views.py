@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.views.generic.edit import FormView
+
 from .forms import ConsentForm
 
 

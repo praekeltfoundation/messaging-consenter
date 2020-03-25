@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import environ
 from os.path import join
+
+import environ
 
 root = environ.Path(__file__) - 3
 env = environ.Env(DEBUG=(bool, False))
