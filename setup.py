@@ -13,6 +13,7 @@ setup(
         "Django>=2.2.2,<2.3",
         "django-environ>=0.4.5,<0.5",
         "rapidpro-python>=2.6.1,<2.7",
+        "raven>=6.10.0,<7",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
