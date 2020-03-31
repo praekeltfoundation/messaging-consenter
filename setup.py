@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "Django>=2.2.2,<2.3",
+        "Django~=3.0",
         "django-environ>=0.4.5,<0.5",
         "rapidpro-python>=2.6.1,<2.7",
         "raven>=6.10.0,<7",
