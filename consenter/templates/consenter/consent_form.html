@@ -1,5 +1,38 @@
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Big Sis | Consent</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Big Sis | Consent" />
+    <meta property="og:image" content="{{request.site.root_url}}{% static 'img/girl-effect-logo.jpg' %}"/>
+    <meta name="description" content="{{self.social_media_description}}" />
+    <meta property="og:description" content="{{self.social_media_description}}"/>
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="{{ STATIC_URL }}img/girl-effect-logo.jpg" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/consent_page.css' %}" media="all">
+  </head>
+  <body>
+    <div id="header" class="header">
+        <img id="header_img" alt="Big Sis" src="{% static 'img/girl-effect-logo.jpg' %}" width="36" height="36"/>
+        <div>Big Sis Terms and Conditions</div>
+        <div><p>Privacy Policy</p></div>
+    </div>
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="consent_block" class="consent_block">
+            <img alt="WhatsApp" src="{% static 'img/WhatsApp_logo.png' %}" width="97" height="24"/>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="policy_content">
+            Lorem ipsum policy content
+        </div>
+  </body>
+</html>
