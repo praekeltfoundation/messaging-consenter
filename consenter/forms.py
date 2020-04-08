@@ -6,7 +6,7 @@ from temba_client.v2 import TembaClient
 
 
 class ConsentForm(forms.Form):
-    checkbox = forms.BooleanField(label="I accept the terms", required=True)
+    checkbox = forms.BooleanField(label="I Accept the Terms", required=True)
     uuid = forms.CharField(widget=forms.HiddenInput(), required=True)
 
     def save_consent(self):

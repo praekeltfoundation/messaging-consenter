@@ -1,1 +1,39 @@
-Consent saved!! You should receive a message shortly.
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 10]><html class="no-js lt-ie9 ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Big Sis | Consent</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{self.social_media_description}}"/>
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="{{ STATIC_URL }}img/big-sis.png"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <meta property="og:description" content="{{self.social_media_description}}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Big Sis | Consent"/>
+  <meta property="og:image" content="{{request.site.root_url}}{% static 'img/big-sis.png' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" media="all">
+</head>
+<body>
+  <div class="header">
+    <div class="description">
+      <img alt="Big Sis" src="{% static 'img/big-sis.png' %}" width="100" height="100" class="description__logo"/>
+      <h3 class="description__label">Big Sis</h3>
+    </div>
+  </div>
+  <div class="container">
+  	<div class="content">
+  		<h2 class="heading heading__secondary">Consent saved!</h2>
+			<h3 class="heading">You should receive a message shortly.</h3>
+		</div>
+	</div>
+</body>
+</html>

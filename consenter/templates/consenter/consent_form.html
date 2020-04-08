@@ -1,5 +1,91 @@
-<form action="" method="post">
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 10]><html class="no-js lt-ie9 ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Big Sis | Consent</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{self.social_media_description}}"/>
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="{{ STATIC_URL }}img/big-sis.png"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <meta property="og:description" content="{{self.social_media_description}}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Big Sis | Consent"/>
+  <meta property="og:image" content="{{request.site.root_url}}{% static 'img/big-sis.png' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" media="all">
+</head>
+<body>
+  <div class="header">
+    <div class="description">
+    	<img alt="Big Sis" src="{% static 'img/big-sis.png' %}" width="100" height="100" class="description__logo"/>
+    	<h3 class="description__label">Big Sis</h3>
+  	</div>
+  </div>
+  <div class="container">
+  	<div class="content">
+  		<div class="content-terms">
+	  		<img alt="WhatsApp" src="{% static 'img/whatsapp2.png' %}" width="100" height="100"/>
+	  		<h1 class="heading heading__primary">WhatsApp Terms and Conditions</h1>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Aenean sed adipiscing diam donec adipiscing tristique risus nec.</p> 
+
+		  	<h3 class="heading heading__label">Felis donec et odio</h3>
+		  	<p>pellentesque diam volutpat commodo sed. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Ut sem nulla pharetra diam. Sit amet mattis vulputate enim nulla aliquet porttitor. Ipsum nunc aliquet bibendum enim. Varius quam quisque id diam vel quam elementum pulvinar etiam. Pellentesque nec nam aliquam sem. Cras semper auctor neque vitae tempus quam pellentesque. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Neque sodales ut etiam sit amet. Ut ornare lectus sit amet est placerat. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat.</p>
+
+				<ol>
+					<li>Morbi tristique senectus et netus.</li> 
+					<li>Dictumst vestibulum rhoncus est.</li> 
+					<li>Pellentesque elit ullamcorper.</li>  
+					<li>Dignissim cras.</li> 
+					<li>Eleifend donec pretium.</li> 
+					<li>Vulputate sapien nec.</li> 
+				</ol> 
+
+				<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
+
+				<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
+
+				<p>Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Tempor id eu nisl nunc. A erat nam at lectus urna duis convallis convallis. Urna id volutpat lacus laoreet non curabitur.</p>
+
+				<ul>
+					<li>Risus nullam eget felis eget nunc lobortis mattis aliquam.</li>
+					<li>Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. </li>
+					<li>Non odio euismod lacinia at quis risus.</li>
+					<li>Est ultricies integer quis auctor elit sed vulputate mi sit.</li>
+				</ul>
+				<p>Malesuada bibendum arcu vitae elementum. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. 
+					Nisl rhoncus mattis rhoncus urna neque. Nec nam aliquam sem et tortor consequat id porta.</p>
+			</div>
+
+			<div class="content-policy">
+	  		<h2 class="heading heading__secondary">Privacy Policy</h2>
+	  		<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
+
+				<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
+	  	</div>
+	  </div>
+
+	  <form class="optin-form" action="" method="post">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
+    	<fieldset>
+    		{{ form.checkbox }}
+  			<label for="id_checkbox">
+  				{{ form.checkbox.label }}:
+  			</label>
+    		{{ form.uuid }}
+  		</fieldset>
+  		<button type="submit" class="call-to-action__button">
+  			Submit
+  		</button>
+	  </form>
+	</div>
+ </body>
+</html>
+
