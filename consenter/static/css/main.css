@@ -71,11 +71,14 @@ ul {
 	outline: 0;
 }
 .description {
+	display: flex;
 	position: relative;
 }
 .description__label {
   color: #fff;
   font-size: 2em;
+	align-self: center;
+	padding: 0 10px 0;
 }
 
 
@@ -178,7 +181,7 @@ input[type=checkbox] {
 .optin-form {
 	padding: 0 10px;
   margin: 0 0 1em;
-  border-top: 2px solid rgb(135,142,149);
+  border-top: 2px solid #e1e4e8;
   width: 70%;
 }
 
