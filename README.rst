@@ -1,8 +1,8 @@
-=================
-GE Messaging Consent
-=================
-.. image:: https://travis-ci.com/praekeltfoundation/ge-messaging-consent.svg?branch=develop
-    :target: https://travis-ci.com/praekeltfoundation/ge-messaging-consent
+===================
+Messaging Consenter
+===================
+.. image:: https://travis-ci.com/praekeltfoundation/messaging-consenter.svg?branch=develop
+    :target: https://travis-ci.com/praekeltfoundation/messaging-consenter
     :alt: Build Passing/Failing on TravisCI.com
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
@@ -10,16 +10,16 @@ GE Messaging Consent
     :alt: Code Style: Black
 
 
-.. image:: https://codecov.io/gh/praekeltfoundation/ge-messaging-consent/branch/develop/graph/badge.svg
-  :target: https://codecov.io/gh/praekeltfoundation/ge-messaging-consent
+.. image:: https://codecov.io/gh/praekeltfoundation/messaging-consenter/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/praekeltfoundation/messaging-consenter
   :alt: Code Coverage
 
 
 .. image:: https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg
-    :target: https://hub.docker.com/r/praekeltfoundation/ge-messaging-consent/tags/
+    :target: https://hub.docker.com/r/praekeltfoundation/messaging-consenter/tags/
     :alt: Docker Automated build
 
-GE-Messaging-Consent is a lightweight Django application for serving a consent form to users. Consent is then saved on the RapidPro contact matching the UUID in the URL.
+Messaging-Consenter is a lightweight Django application for serving a consent form to users. Consent is then saved on the RapidPro contact matching the UUID in the URL.
 This might get rolled into https://github.com/praekeltfoundation/rp-sidekick at some point.
 
 -----
@@ -39,10 +39,10 @@ Build a link for the user using the domain for the application, the word "consen
 ------------------
 Local installation
 ------------------
-To set up and run ``ge-messaging-consent`` locally, do the following::
+To set up and run ``messaging-consenter`` locally, do the following::
 
-    $ git clone git@github.com:praekeltfoundation/ge-messaging-consent.git
-    $ cd ge-messaging-consent
+    $ git clone git@github.com:praekeltfoundation/messaging-consenter.git
+    $ cd messaging-consenter
     $ virtualenv ve
     $ source ve/bin/activate
     $ pip install -e .
@@ -58,7 +58,8 @@ Tools
 Contributing
 ------------
 
-See our `ways of working`_ for a guide on how to contribute to ``ge-messaging-consent``.
+See our `ways of working`_ for a guide on how to contribute to ``messaging-consenter``.
 
 .. _black: https://github.com/ambv/black
 .. _ways of working: ./docs/ways-of-working.md
+
