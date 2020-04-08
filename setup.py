@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="ge-messaging-consent",
+    name="messaging-consenter",
     version="1.0.0",
-    url="http://github.com/praekeltfoundation/ge-messaging-consent",
+    url="http://github.com/praekeltfoundation/messaging-consenter",
     license="BSD",
     author="Praekelt Foundation",
     author_email="dev@praekeltfoundation.org",
