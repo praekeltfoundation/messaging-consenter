@@ -72,7 +72,7 @@
 	  	</div>
 	  </div>
 
-	  <form class="optin-form" action="" method="post">
+	  <form class="optin-form" id="optin-form" action="" method="post">
     {% csrf_token %}
     	<fieldset>
     		{{ form.checkbox }}
@@ -81,11 +81,18 @@
   			</label>
     		{{ form.uuid }}
   		</fieldset>
-  		<button type="submit" class="call-to-action__button">
-  			Submit
-  		</button>
 	  </form>
 	</div>
+	<script>
+		var form = document.getElementById("optin-form");
+		var checkbox = document.getElementById("id_checkbox");
+
+		checkbox.addEventListener("CheckboxStateChange", function () {
+			if (checkbox.checked) {
+				  form.submit();
+			}
+		});
+	</script>
  </body>
 </html>
 
