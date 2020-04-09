@@ -12,6 +12,7 @@ setup(
     install_requires=[
         "Django~=3.0",
         "django-environ>=0.4.5,<0.5",
+        "dj-database-url",
         "rapidpro-python>=2.6.1,<2.7",
         "raven>=6.10.0,<7",
     ],
