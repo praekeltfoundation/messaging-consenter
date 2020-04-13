@@ -21,6 +21,7 @@
   <meta property="og:title" content="Big Sis | Consent"/>
   <meta property="og:image" content="{{request.site.root_url}}{% static 'img/big-sis.png' %}"/>
   <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" media="all">
+
 </head>
 <body>
   <div class="header">
@@ -29,63 +30,92 @@
     	<h3 class="description__label">Big Sis</h3>
   	</div>
   </div>
-  <div class="container">
-  	<div class="content">
-  		<div class="content-terms">
-	  		<img alt="WhatsApp" src="{% static 'img/whatsapp2.png' %}" width="100" height="100"/>
-	  		<h1 class="heading heading__primary">WhatsApp Terms and Conditions</h1>
-			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Aenean sed adipiscing diam donec adipiscing tristique risus nec.</p> 
+  {% block content %}
+	  <div class="container">
+	  	<div id="content" class="content">
+	  		<div class="content-terms">
+		  		<img alt="WhatsApp" src="{% static 'img/whatsapp2.png' %}" width="100" height="100"/>
+		  		<h1 class="heading heading__primary">WhatsApp Terms and Conditions</h1>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Aenean sed adipiscing diam donec adipiscing tristique risus nec.</p> 
 
-		  	<h3 class="heading heading__label">Felis donec et odio</h3>
-		  	<p>pellentesque diam volutpat commodo sed. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Ut sem nulla pharetra diam. Sit amet mattis vulputate enim nulla aliquet porttitor. Ipsum nunc aliquet bibendum enim. Varius quam quisque id diam vel quam elementum pulvinar etiam. Pellentesque nec nam aliquam sem. Cras semper auctor neque vitae tempus quam pellentesque. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Neque sodales ut etiam sit amet. Ut ornare lectus sit amet est placerat. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat.</p>
+			  	<h3 class="heading heading__label">Felis donec et odio</h3>
+			  	<p>pellentesque diam volutpat commodo sed. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Ut sem nulla pharetra diam. Sit amet mattis vulputate enim nulla aliquet porttitor. Ipsum nunc aliquet bibendum enim. Varius quam quisque id diam vel quam elementum pulvinar etiam. Pellentesque nec nam aliquam sem. Cras semper auctor neque vitae tempus quam pellentesque. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Neque sodales ut etiam sit amet. Ut ornare lectus sit amet est placerat. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat.</p>
 
-				<ol>
-					<li>Morbi tristique senectus et netus.</li> 
-					<li>Dictumst vestibulum rhoncus est.</li> 
-					<li>Pellentesque elit ullamcorper.</li>  
-					<li>Dignissim cras.</li> 
-					<li>Eleifend donec pretium.</li> 
-					<li>Vulputate sapien nec.</li> 
-				</ol> 
+					<ol>
+						<li>Morbi tristique senectus et netus.</li> 
+						<li>Dictumst vestibulum rhoncus est.</li> 
+						<li>Pellentesque elit ullamcorper.</li>  
+						<li>Dignissim cras.</li> 
+						<li>Eleifend donec pretium.</li> 
+						<li>Vulputate sapien nec.</li> 
+					</ol> 
 
-				<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
+					<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
 
-				<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
+					<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
 
-				<p>Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Tempor id eu nisl nunc. A erat nam at lectus urna duis convallis convallis. Urna id volutpat lacus laoreet non curabitur.</p>
+					<p>Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Tempor id eu nisl nunc. A erat nam at lectus urna duis convallis convallis. Urna id volutpat lacus laoreet non curabitur.</p>
 
-				<ul>
-					<li>Risus nullam eget felis eget nunc lobortis mattis aliquam.</li>
-					<li>Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. </li>
-					<li>Non odio euismod lacinia at quis risus.</li>
-					<li>Est ultricies integer quis auctor elit sed vulputate mi sit.</li>
-				</ul>
-				<p>Malesuada bibendum arcu vitae elementum. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. 
-					Nisl rhoncus mattis rhoncus urna neque. Nec nam aliquam sem et tortor consequat id porta.</p>
-			</div>
+					<ul>
+						<li>Risus nullam eget felis eget nunc lobortis mattis aliquam.</li>
+						<li>Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. </li>
+						<li>Non odio euismod lacinia at quis risus.</li>
+						<li>Est ultricies integer quis auctor elit sed vulputate mi sit.</li>
+					</ul>
+					<p>Malesuada bibendum arcu vitae elementum. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. 
+						Nisl rhoncus mattis rhoncus urna neque. Nec nam aliquam sem et tortor consequat id porta.</p>
+				</div>
 
-			<div class="content-policy">
-	  		<h2 class="heading heading__secondary">Privacy Policy</h2>
-	  		<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
+				<div class="content-policy">
+		  		<h2 class="heading heading__secondary">Privacy Policy</h2>
+		  		<p>Aliquet bibendum enim facilisis gravida neque convallis a cras. Rutrum tellus pellentesque eu tincidunt tortor. Elit duis tristique sollicitudin nibh sit amet. Fames ac turpis egestas integer eget. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Feugiat nibh sed pulvinar proin gravida. Aenean vel elit scelerisque mauris pellentesque.</p>
 
-				<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
-	  	</div>
-	  </div>
+					<p>In eu mi bibendum neque egestas congue quisque egestas diam. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Nibh tellus molestie nunc non blandit massa enim nec. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit.</p>
+		  	</div>
+		  </div>
+		  <form id="terms" class="optin-form" action="" method="post">
+	    {% csrf_token %}
+	    	<fieldset>
+	    		{{ form.checkbox }}
+	  			<label id="label_for_id_checkbox" for="id_checkbox">
+	  				{{ form.checkbox.label }}:
+	  			</label>
+	    		{{ form.uuid }}
+	  		</fieldset>
+		  </form>
+		</div>
+	{% endblock %}
+	<script type="text/javascript">
+		"use strict";
+		const contentDiv = document.getElementById('content');
+		const checkbox = document.getElementById('id_checkbox');
+		const form = document.getElementById('terms');
 
-	  <form class="optin-form" action="" method="post">
-    {% csrf_token %}
-    	<fieldset>
-    		{{ form.checkbox }}
-  			<label for="id_checkbox">
-  				{{ form.checkbox.label }}:
-  			</label>
-    		{{ form.uuid }}
-  		</fieldset>
-  		<button type="submit" class="call-to-action__button">
-  			Submit
-  		</button>
-	  </form>
-	</div>
+		document.addEventListener('DOMContentLoaded',function(e){
+			checkbox.disabled = true;
+			checkbox.checked = false;
+			contentDiv.addEventListener('scroll',function(e){
+				if(e.target.scrollTop > 85) {
+					checkbox.disabled = false;
+				} else {
+					checkbox.disabled = true;
+				}
+			});
+			let dots = document.createElement('div');
+			    dots.id = 'dots1';
+			    dots.innerHTML = '<span></span><span></span><span></span><span></span>';
+			checkbox.addEventListener('change', function(e){
+				if (e.target.checked) {
+					form.prepend(dots);
+			    setTimeout(function(e){
+			    	form.submit();
+			    },800)  
+			  } else {
+			  	dots.remove();
+			  }
+			});
+		});
+	</script>
  </body>
 </html>
 
