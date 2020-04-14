@@ -22,6 +22,8 @@ env = environ.Env(DEBUG=(bool, False))
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ROOT_DIR = root()
+environ.Env.read_env(join(ROOT_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -124,7 +126,7 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
 )
 
-STATIC_ROOT = join(BASE_DIR, "staticfiles")
+STATIC_ROOT = join(ROOT_DIR, "staticfiles")
 STATIC_URL = "/static/"
 COMPRESS_ENABLED = True
 
