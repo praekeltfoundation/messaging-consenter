@@ -24,6 +24,20 @@ class TestConsentView(TestCase):
 
         self.assertEqual(mock_save_consent.call_count, 1)
 
+    @patch("consenter.forms.ConsentForm.save_consent")
+    def test_form_submission_redirects_to_success(self, mock_save_consent):
+        response = self.client.post(
+            "/consent/some-uuid/", data={"checkbox": True, "uuid": "some-uuid"}
+        )
+
+        self.assertRedirects(
+            response,
+            "/consent/success/",
+            status_code=302,
+            target_status_code=200,
+            fetch_redirect_response=True,
+        )
+
 
 class TestConsentForm(TestCase):
     @patch("temba_client.v2.TembaClient.update_contact", autospec=True)
