@@ -26,9 +26,10 @@ This might get rolled into https://github.com/praekeltfoundation/rp-sidekick at 
 Usage
 -----
 Run docker container with the following environment variables set
- * CONSENT_REDIRECT_URL - URL to redirect a user to after they have provided consent (default: /consent/success/)
+ * CONSENT_REDIRECT_URL (Optional) - URL to redirect a user to after they have provided consent (default: /consent/success/)
  * RAPIDPRO_URL - URL for the RapidPro instance
  * RAPIDPRO_TOKEN - authentication token for the RapidPro token
+ * RAPIDPRO_FLOW_ID (Optional) - the id of the RapidPro flow to start a user on once they have provided consent
 
 The RapidPro Organisation must have two custom fields for Contacts:
  * consent_date (Date and Time field)
