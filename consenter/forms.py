@@ -16,8 +16,9 @@ class ConsentForm(forms.Form):
         if not contact:
             return
 
+        contact_uuid = self.cleaned_data["uuid"]
         client.update_contact(
-            contact=self.cleaned_data["uuid"],
+            contact=contact_uuid,
             fields={
                 "consent_date": "{}T00:00:00.000000+02:00".format(
                     date.today().isoformat()
@@ -25,3 +26,11 @@ class ConsentForm(forms.Form):
                 "consent": "true",
             },
         )
+
+        # Start the contact on a flow if one is specified
+        if settings.RAPIDPRO_FLOW_ID:
+            client.create_flow_start(
+                settings.RAPIDPRO_FLOW_ID,
+                contacts=[contact_uuid],
+                restart_participants=True,
+            )
