@@ -1,7 +1,7 @@
 from datetime import date
 from unittest.mock import Mock, patch
 
-from django.test import TestCase
+from django.test import TestCase, override_settings
 
 from .forms import ConsentForm
 
@@ -40,9 +40,12 @@ class TestConsentView(TestCase):
 
 
 class TestConsentForm(TestCase):
+    @patch("temba_client.v2.TembaClient.create_flow_start", autospec=True)
     @patch("temba_client.v2.TembaClient.update_contact", autospec=True)
     @patch("temba_client.v2.TembaClient.get_contacts", autospec=True)
-    def test_save_consent_calls_RP_to_update_contact(self, mock_get, mock_update):
+    def test_save_consent_calls_RP_to_update_contact(
+        self, mock_get, mock_update, mock_flowstart
+    ):
         # Build mock object
         mock_contact_object = Mock()
         mock_contact_object.uuid = "some-uuid"
@@ -75,6 +78,34 @@ class TestConsentForm(TestCase):
                 },
             },
         )
+
+        # confirm flowstart not called
+        self.assertEqual(mock_flowstart.call_count, 0)
+
+    @override_settings(RAPIDPRO_FLOW_ID="test-flow-id")
+    @patch("temba_client.v2.TembaClient.create_flow_start", autospec=True)
+    @patch("temba_client.v2.TembaClient.update_contact", autospec=True)
+    @patch("temba_client.v2.TembaClient.get_contacts", autospec=True)
+    def test_save_consent_starts_contact_on_flow(
+        self, mock_get, mock_update, mock_flowstart
+    ):
+        # Build mock object
+        mock_contact_object = Mock()
+        mock_contact_object.uuid = "some-uuid"
+        mock_get.return_value.first.return_value = mock_contact_object
+
+        # Populate form
+        form = ConsentForm(data={"checkbox": True, "uuid": "some-uuid"})
+        form.is_valid()
+        form.save_consent()
+
+        # confirm flowstart called
+        self.assertEqual(mock_flowstart.call_count, 1)
+        call_args, call_kwargs = mock_flowstart.call_args
+        self.assertEqual(
+            call_kwargs, {"contacts": ["some-uuid"], "restart_participants": True}
+        )
+        self.assertIn("test-flow-id", call_args)
 
     @patch("temba_client.v2.TembaClient.update_contact", autospec=True)
     @patch("temba_client.v2.TembaClient.get_contacts", autospec=True)
