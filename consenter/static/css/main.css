@@ -127,10 +127,12 @@ ul {
 
 
 form.optin-form {
-	padding: 0 10px;
-  margin: 0 0 1em;
+  background: #fff;
+  bottom: 0;
   border-top: 2px solid #e1e4e8;
-  width: 70%;
+	padding: 0 10px;
+  position: fixed;
+  width: 100%;
 }
 fieldset  {
 	border: 0;
@@ -180,10 +182,27 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
+@media screen and (min-width: 782px) {
+  .header {
+    padding: 2em 25%;
+  }
+  .container {
+    padding: 1em 25%;
+  }
+  .content-terms,
+  .content-policy {
+    padding: 0 0 4em;
+  }
 
+  form.optin-form {
+    background: transparent;
+    position: relative;
+    margin: 0 0 1em;
+    width: 70%;
+  }
+}
 /*
 	Submit Button
-
 .call-to-action__button {
 	background: url(/static/img/button-purple.png) 0 0 / 100% no-repeat transparent;
 	font-weight: 400;
@@ -211,18 +230,6 @@ input[type=checkbox] {
 */
 
 
-@media screen and (min-width: 782px) {
-  .header {
-    padding: 2em 25%;
-  }
-  .container {
-    padding: 1em 25%;
-  }
-  .content-terms,
-  .content-policy {
-    padding: 0 0 4em;
-  }
-}
 
 /*--------------- DOTS ANIMATION -----------------*/
 
