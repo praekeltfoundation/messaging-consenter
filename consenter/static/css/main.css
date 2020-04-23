@@ -86,13 +86,30 @@ ul {
   position: relative;
 }
 .content {
+  height: 440px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 	overflow: auto;
 	position: relative;
 	padding: 0 15px 15px;
 }
+.content::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #7d848b;
+  border-radius: 10px;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(134,98,252,1);
+  outline: 1px solid rgba(134,98,252,1);
+  border-radius: 10px;
+}
+
 .content-terms,
 .content-policy {
-	padding: 0 0 1em;
+	padding: 0 0 2em;
 }
 
 .heading {
@@ -164,8 +181,8 @@ input[type=checkbox] {
 }
 
 
-/* 
-	Submit Button 
+/*
+	Submit Button
 
 .call-to-action__button {
 	background: url(/static/img/button-purple.png) 0 0 / 100% no-repeat transparent;
@@ -201,27 +218,10 @@ input[type=checkbox] {
   .container {
     padding: 1em 25%;
   }
-  .content {
-  	height: 440px;
-		overflow-y: scroll;
-    overflow-x: hidden;
+  .content-terms,
+  .content-policy {
+    padding: 0 0 4em;
   }
-  .content::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 10px;
-  }
-  .content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #7d848b;
-    border-radius: 10px;
-  }
-  .content::-webkit-scrollbar-thumb {
-    background-color: rgba(134,98,252,1);
-    outline: 1px solid rgba(134,98,252,1);
-    border-radius: 10px;
-  }
-  .content-terms {
-		padding: 0 0 4em;
-	}
 }
 
 /*--------------- DOTS ANIMATION -----------------*/
