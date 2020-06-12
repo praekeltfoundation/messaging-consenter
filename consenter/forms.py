@@ -43,6 +43,6 @@ class ConsentForm(forms.Form):
                 contacts=[contact_uuid],
                 restart_participants=True,
             )
-            logging.info('{} - Completed call to start contact {} on flow'.format(datetime.now().isoformat(), settings.RAPIDPRO_URL, self.cleaned_data["uuid"]))
+            logging.info('{} - Completed call to start contact {} on flow'.format(datetime.now().isoformat(), self.cleaned_data["uuid"]))
 
-        logging.info('{} - Exiting.'.format(datetime.now().isoformat(), settings.RAPIDPRO_URL, self.cleaned_data["uuid"]))
+        logging.info('{} - Exiting.'.format(datetime.now().isoformat()))
