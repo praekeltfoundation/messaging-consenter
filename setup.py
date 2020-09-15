@@ -16,7 +16,7 @@ setup(
         "psycopg2==2.8.4",
         "rapidpro-python>=2.6.1,<2.7",
         "raven>=6.10.0,<7",
-        'structlog',
+        "structlog",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
